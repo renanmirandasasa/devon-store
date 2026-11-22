@@ -317,6 +317,8 @@ footer a:hover{text-decoration:underline;text-underline-offset:4px}
   footer .wrap{grid-template-columns:auto 1fr 1fr;justify-items:start;text-align:left;padding-block:52px}
 }
 @media(min-width:1080px){ .grid{grid-template-columns:repeat(4,1fr)} }
+/* em telas muito largas a foto para de esticar, para nao perder nitidez */
+@media(min-width:1560px){ .hero-photo{width:880px} }
 @media(prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
   .r1,.r2,.r3,.r4,.r5,.card,.bar img{opacity:1!important;transform:none!important}
