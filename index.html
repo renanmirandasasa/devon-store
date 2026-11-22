@@ -98,7 +98,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .bar nav a:hover::after,.bar nav a:focus-visible::after{transform:scaleX(1)}
 
 /* ---- hero ---- */
-.hero .wrap{padding-block:52px 40px;text-align:center}
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1;padding-block:52px 34px;text-align:center}
+.hero-photo{position:relative;width:100%;height:clamp(250px,64vw,340px);margin-top:30px;
+  background:url(hero.jpg) 50% 28%/cover no-repeat;filter:grayscale(1) contrast(1.03);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 34%);
+          mask-image:linear-gradient(to bottom,transparent 0,#000 34%);
+  animation:rise .9s cubic-bezier(.2,.7,.3,1) .55s both}
 .hero h1{font-size:clamp(2.6rem,11.5vw,3.6rem);letter-spacing:-.015em}
 .hero h1 i{font-style:italic}
 .hero .sub{margin:18px auto 0;max-width:36ch;color:var(--grey);font-size:1.0625rem}
@@ -293,9 +299,16 @@ footer a:hover{text-decoration:underline;text-underline-offset:4px}
 }
 @media(min-width:860px){
   body{font-size:17px}
-  .hero .wrap{padding-block:96px 76px}
-  .hero h1{font-size:clamp(3.4rem,7vw,5.4rem)}
-  .hero .sub{font-size:1.125rem}
+  .hero .wrap{padding-block:96px 84px;text-align:left}
+  .hero .wrap > div{max-width:47%}
+  .hero h1{font-size:clamp(3rem,5.4vw,4.4rem)}
+  .hero .sub{font-size:1.0625rem;margin-left:0}
+  .hero .cta{justify-content:flex-start}
+  .hero .facts{margin-left:0}
+  .hero-photo{position:absolute;right:0;top:0;bottom:0;width:57%;height:auto;margin:0;
+    background-position:45% 30%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.28) 24%,rgba(0,0,0,.8) 48%,#000 64%);
+            mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.28) 24%,rgba(0,0,0,.8) 48%,#000 64%)}
   .door{padding:38px 32px}
   .steps{grid-template-columns:repeat(4,1fr)}
   .section{padding-block:76px}
@@ -340,6 +353,7 @@ footer a:hover{text-decoration:underline;text-underline-offset:4px}
       </div>
     </div>
   </div>
+  <div class="hero-photo" role="img" aria-label="Dois rapazes vestindo camisas da Devon"></div>
 </section>
 
 <div class="tick" aria-hidden="true"><div class="tick-in">
