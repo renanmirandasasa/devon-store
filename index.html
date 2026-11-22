@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Devon Store | Camisas Personalizadas</title>
+<meta name="description" content="Camisas de time, streetwear e estampa personalizada. Manaus, com envio para todo o Brasil.">
+<meta name="theme-color" content="#F5F2EC">
+<link rel="icon" href="favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Devon Store">
+<meta property="og:title" content="Devon Store | Camisas Personalizadas">
+<meta property="og:description" content="Camisas de time, streetwear e estampa personalizada. Manaus, com envio para todo o Brasil.">
+<meta property="og:image" content="og.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Jost:wght@400;500;600&display=swap">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px system-ui,-apple-system,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<style>
+/* Layout: mobile-first heritage catalog — the logo's arch and baseline rule as the page's grammar. Monochrome, like the mark. */
+:root{
+  --bone:#F5F2EC;
+  --paper:#FBF9F5;
+  --ink:#141210;
+  --grey:#5F584F;
+  --rule:#D5CEC0;
+  color-scheme:light;
+  --d:'Bodoni Moda',"Didot","Bodoni MT",Georgia,serif;
+  --b:'Jost',system-ui,-apple-system,"Segoe UI",sans-serif;
+  --arch:52% 52% 0 0 / 38% 38% 0 0;
+  --gut:18px;
+}
+*{box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:var(--b);font-weight:400;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin-inline:auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--d);font-weight:600;margin:0;text-wrap:balance;line-height:1.06}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+img{display:block}
+.lbl{font-family:var(--b);font-weight:600;font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.muted{color:var(--grey)}
+.rule{height:3px;background:var(--ink);border:0;margin:0}
+
+/* ---- bar ---- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bone)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:25;background:rgba(245,242,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);transition:background .45s,border-color .45s,backdrop-filter .45s}
+.bar.scrolled{background:var(--bone);border-bottom-color:transparent;backdrop-filter:none}
+.wave{position:absolute;left:0;top:100%;width:100%;height:24px;fill:var(--bone);opacity:0;pointer-events:none;z-index:0;transition:opacity .45s;filter:drop-shadow(0 7px 9px rgba(20,18,16,.07))}
+.bar.scrolled .wave{opacity:1}
+.bar .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:2px;padding-block:8px 6px}
+.brand{width:56px;height:56px;display:grid;place-items:center;padding:0;line-height:0;border:1.5px solid transparent;border-radius:50%;background:transparent;
+  transition:width .5s cubic-bezier(.4,0,.2,1),height .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1),background .45s,border-color .45s,box-shadow .45s}
+.bar img{height:40px;width:auto;opacity:0;transform:translateY(-7px) scale(.94);animation:mark .8s cubic-bezier(.2,.7,.3,1) .8s forwards;
+  transition:height .5s cubic-bezier(.4,0,.2,1)}
+@keyframes mark{to{opacity:1;transform:none}}
+/* touro escarvando: entra sozinho quando a pagina fica parada */
+.bar img.ready{animation:none;opacity:1;transform:none}
+.bar img.ready.paw{animation:paw 1.5s cubic-bezier(.35,0,.3,1)}
+.bar img{transform-origin:24% 92%}
+@keyframes paw{
+  0%{transform:none}
+  7%{transform:translate(2px,1px) rotate(1deg)}
+  17%{transform:translate(-5px,0) rotate(-1.9deg)}
+  27%{transform:translate(4px,1.5px) rotate(1.4deg)}
+  38%{transform:translate(-4px,0) rotate(-1.5deg)}
+  50%{transform:translate(3px,1px) rotate(1deg)}
+  63%{transform:translate(-2px,0) rotate(-.7deg)}
+  78%{transform:translate(1px,.5px) rotate(.3deg)}
+  100%{transform:none}
+}
+.bar.scrolled .brand{width:44px;height:44px;transform:translateY(7px);background:transparent;border-color:transparent;box-shadow:none}
+.bar.scrolled img{height:30px}
+.bar.scrolled .wrap{padding-block:5px 3px}
+@media(prefers-reduced-motion:reduce){.bar img{opacity:1;transform:none;animation:none}}
+.bar nav{display:flex;justify-content:center;gap:20px;max-width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  max-height:46px;opacity:1;transition:max-height .45s cubic-bezier(.4,0,.2,1),opacity .3s,margin-top .45s}
+.bar.scrolled nav{max-height:0;opacity:0;margin-top:-6px;pointer-events:none}
+@media(min-width:600px){
+  .brand{width:64px;height:64px}
+  .bar img{height:46px}
+  .bar.scrolled .brand{width:50px;height:50px}
+  .bar.scrolled img{height:34px}
+}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{position:relative;text-decoration:none;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);white-space:nowrap;padding:10px 0;transition:color .25s}
+.bar nav a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .32s cubic-bezier(.2,.7,.3,1)}
+.bar nav a:hover,.bar nav a:focus-visible{color:var(--ink)}
+.bar nav a:hover::after,.bar nav a:focus-visible::after{transform:scaleX(1)}
+
+/* ---- hero ---- */
+.hero .wrap{padding-block:52px 40px;text-align:center}
+.hero h1{font-size:clamp(2.6rem,11.5vw,3.6rem);letter-spacing:-.015em}
+.hero h1 i{font-style:italic}
+.hero .sub{margin:18px auto 0;max-width:36ch;color:var(--grey);font-size:1.0625rem}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.r1,.r2,.r3,.r4,.r5{animation:rise .75s cubic-bezier(.2,.7,.3,1) both}
+.r1{animation-delay:.04s}.r2{animation-delay:.13s}.r3{animation-delay:.26s}.r4{animation-delay:.37s}.r5{animation-delay:.47s}
+.cta{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 26px;border:1.5px solid var(--ink);font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .28s,color .28s}
+.btn i{font-style:normal;transition:transform .28s cubic-bezier(.2,.7,.3,1)}
+.btn:hover i{transform:translateX(5px)}
+.btn.solid{background:var(--ink);color:var(--bone)}
+.btn.solid:hover{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bone)}
+.facts{margin:34px auto 0;max-width:470px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border-top:1px solid var(--rule);padding-top:20px}
+.facts b{display:block;font-family:var(--d);font-weight:600;font-size:1.45rem;line-height:1}
+.facts span{display:block;margin-top:5px;font-size:.625rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--grey)}
+/* ticker */
+.tick{background:var(--ink);color:var(--bone);overflow:hidden;padding:13px 0}
+.tick-in{display:flex;width:max-content;animation:slide 32s linear infinite}
+.tick:hover .tick-in{animation-play-state:paused}
+.tick p{font-family:var(--d);font-weight:600;font-size:.95rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;padding-right:0}
+.tick i{font-style:normal;opacity:.38;padding:0 18px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---- doors ---- */
+.doors{display:grid;gap:1px;background:var(--rule);border-block:1px solid var(--rule)}
+.door{display:block;text-decoration:none;background:var(--bone);padding:26px var(--gut);transition:background .2s,color .2s}
+.door:hover,.door:focus-visible{background:var(--ink);color:var(--bone)}
+.door:hover .lbl,.door:hover p{color:#C9C2B6}
+.door h3{font-size:1.65rem;margin:10px 0 8px}
+.door p{color:var(--grey);max-width:38ch;font-size:.9375rem}
+.door .go{margin-top:14px;display:inline-block;font-size:.6875rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.door .go i{font-style:normal;display:inline-block;transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.door:hover .go i,.door:focus-visible .go i{transform:translateX(7px)}
+
+/* ---- sections ---- */
+.section{padding-block:40px}
+.shead h2{font-size:clamp(1.9rem,8vw,2.4rem);margin-top:8px}
+.shead .r{font-size:.8125rem;color:var(--grey);margin-top:8px}
+.under{margin:16px 0 24px}
+
+/* ---- controls ---- */
+.controls{display:grid;gap:12px;margin-bottom:16px}
+.search{display:flex;align-items:center;gap:10px;border:1.5px solid var(--ink);padding:12px 14px}
+.search input{flex:1;min-width:0;background:none;border:0;font:inherit;font-size:1rem;color:var(--ink)}
+.search input::placeholder{color:var(--grey)}
+select{border:1.5px solid var(--ink);background:var(--bone);padding:12px 14px;font:inherit;font-weight:500;font-size:.9375rem;color:var(--ink);width:100%}
+.chips{display:flex;gap:22px;overflow-x:auto;padding-bottom:10px;margin-bottom:24px;border-bottom:1px solid var(--rule);scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{position:relative;flex:0 0 auto;padding:6px 0;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);border-bottom:2px solid transparent;display:flex;gap:6px;align-items:baseline;white-space:nowrap;transition:color .25s}
+.chip:hover{color:var(--ink)}
+.chip sup{font-family:var(--d);font-weight:600;font-size:.6875rem;opacity:.65}
+.chip[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* ---- grid: 2 up on phones ---- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 14px}
+.card{text-align:left;display:flex;flex-direction:column;gap:10px;min-width:0;animation:rise .55s cubic-bezier(.2,.7,.3,1) both}
+.shot{position:relative;aspect-ratio:1/1.1;max-width:100%;background:var(--paper);border:1px solid var(--rule);border-radius:var(--arch);display:grid;place-items:center;overflow:hidden;transition:background .2s,border-color .2s}
+.card:hover .shot{background:var(--ink);border-color:var(--ink)}
+.shot svg{width:60%;height:auto;color:var(--ink);transition:color .25s,transform .4s cubic-bezier(.2,.7,.3,1)}
+.card:hover .shot svg{color:var(--bone);transform:scale(1.07) translateY(-4px)}
+.shot::after{content:"Pedir";position:absolute;left:0;right:0;bottom:0;padding:11px;background:var(--ink);color:var(--bone);font-size:.625rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;text-align:center;transform:translateY(101%);transition:transform .28s cubic-bezier(.2,.7,.3,1)}
+.card:hover .shot::after,.card:focus-visible .shot::after{transform:none}
+.card .price{transition:transform .25s cubic-bezier(.2,.7,.3,1)}
+.card:hover .price{transform:translateX(-2px) scale(1.04)}
+.shot .n{position:absolute;top:12px;left:0;right:0;text-align:center;font-family:var(--d);font-weight:600;font-size:.75rem;letter-spacing:.08em;color:var(--grey);transition:color .2s}
+.card:hover .shot .n{color:var(--bone)}
+.shot .ph{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:.5625rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#BDB5A6}
+.meta1{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.cat{font-size:.625rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+.price{font-family:var(--d);font-weight:600;font-size:1.0625rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.name{font-size:.9375rem;font-weight:500;line-height:1.3}
+.sz{font-size:.625rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.empty{grid-column:1/-1;padding:48px 18px;text-align:center;color:var(--grey);border:1px solid var(--rule);border-radius:var(--arch)}
+/* destaque */
+.feat{background:var(--ink);color:var(--bone);margin-bottom:26px;overflow:hidden}
+.feat-art{margin:22px auto 0;width:186px;aspect-ratio:1/1.05;background:#1E1A16;border:1px solid #363029;border-radius:var(--arch);display:grid;place-items:center}
+.feat-art svg{width:62%;height:auto;color:var(--bone);animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.feat-txt{padding:20px var(--gut) 26px;text-align:center}
+.feat-txt .lbl{color:#A79E92}
+.feat-txt h3{font-size:1.85rem;margin:10px 0 8px}
+.feat-txt p{color:#B5ABA0;font-size:.9375rem;max-width:40ch;margin-inline:auto}
+.feat-row{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:20px}
+.feat .price{font-size:1.55rem;color:var(--bone)}
+.feat .btn{border-color:var(--bone);background:var(--bone);color:var(--ink)}
+.feat .btn:hover{background:transparent;color:var(--bone)}
+@media(min-width:720px){
+  .feat{display:grid;grid-template-columns:260px 1fr;align-items:center}
+  .feat-art{margin:28px}
+  .feat-txt{padding:30px 34px 30px 4px;text-align:left}
+  .feat-txt p{margin-inline:0}
+  .feat-row{justify-content:flex-start}
+}
+.shown{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin:-12px 0 18px}
+
+/* ---- steps ---- */
+.steps{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.step{background:var(--bone);padding:22px 20px}
+.step .k{font-family:var(--d);font-weight:700;font-size:1.6rem;line-height:1}
+.step h4{font-size:1.125rem;margin:8px 0 6px}
+.step p{color:var(--grey);font-size:.9375rem}
+/* bloco escuro da encomenda */
+.dark{background:var(--ink);color:var(--bone);position:relative;overflow:hidden}
+.dark .lbl{color:#A79E92}
+.dark h2,.dark h4{color:var(--bone)}
+.dark .rule{background:var(--bone)}
+.dark .lead{font-size:1.0625rem;color:#C4BBB0;max-width:46ch;margin-bottom:30px}
+.dark .wrap{position:relative;z-index:1}
+.mark-bg{position:absolute;right:-70px;bottom:-50px;width:min(360px,62vw);opacity:.055;pointer-events:none;z-index:0}
+.temas{margin-bottom:32px}
+.temas ul{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.temas li{border:1px solid #3B352E;padding:9px 16px;font-size:.8125rem;font-weight:500;letter-spacing:.05em;color:#D6CEC3;transition:background .25s,color .25s,border-color .25s}
+.temas li:hover{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.dark .steps{background:#3B352E;border-color:#3B352E}
+.dark .step{background:var(--ink)}
+.dark .step .k{color:var(--bone)}
+.dark .step p{color:#B5ABA0}
+.arte-end{margin-top:34px;display:grid;gap:22px;border-top:1px solid #3B352E;padding-top:28px}
+.arte-end p{color:#B5ABA0;font-size:.9375rem;max-width:54ch;margin-top:9px}
+.dark .btn{border-color:var(--bone);background:var(--bone);color:var(--ink);justify-self:start}
+.dark .btn:hover{background:transparent;color:var(--bone)}
+@media(min-width:760px){.arte-end{grid-template-columns:1fr auto;align-items:end}}
+
+/* ---- table ---- */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:.9375rem}
+th,td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+th{font-size:.625rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);border-bottom:2.5px solid var(--ink)}
+td{font-weight:500}
+td:first-child{font-family:var(--d);font-weight:600;font-size:1.0625rem}
+tbody tr:last-child td{border-bottom:0}
+
+/* ---- faq ---- */
+details{border-bottom:1px solid var(--rule)}
+summary{padding:17px 2px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:1rem;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--d);font-weight:600;font-size:1.25rem;color:var(--grey)}
+details[open] summary::after{content:"–"}
+details p{padding:0 2px 18px;color:var(--grey);font-size:.9375rem;max-width:64ch}
+
+/* ---- footer ---- */
+footer{background:var(--ink);color:var(--bone)}
+footer .wrap{padding-block:40px;display:grid;gap:28px;justify-items:center;text-align:center}
+footer img{height:104px;width:auto}
+footer h5{font-size:.625rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A79E92;margin:0 0 10px}
+footer a{color:var(--bone);text-decoration:none;display:block;padding:7px 0;font-size:.9375rem;font-weight:500}
+footer a:hover{text-decoration:underline;text-underline-offset:4px}
+.legal{border-top:1px solid #332E29}
+.legal .wrap{padding-block:16px;font-size:.75rem;color:#A79E92;display:grid;gap:4px;text-align:center}
+
+/* ---- sticky whatsapp (phone) ---- */
+.dock{position:fixed;z-index:28;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+.dock a{display:flex;align-items:center;justify-content:center;height:56px;width:56px;padding:0;border-radius:999px;background:var(--ink);color:var(--bone);text-decoration:none;
+  font-weight:600;font-size:.875rem;letter-spacing:.04em;overflow:hidden;box-shadow:0 8px 24px rgba(20,18,16,.26);
+  transition:width .45s cubic-bezier(.4,0,.2,1),padding .45s cubic-bezier(.4,0,.2,1)}
+.dock svg{flex:0 0 auto}
+.dock span{max-width:0;opacity:0;white-space:nowrap;transition:max-width .45s cubic-bezier(.4,0,.2,1),opacity .3s,margin-left .45s}
+.dock.open a{width:auto;padding:0 22px}
+.dock.open span{max-width:200px;opacity:1;margin-left:10px}
+.pad{height:70px}
+
+/* ---- sheet ---- */
+.scrim{position:fixed;inset:0;background:rgba(20,18,16,.6);z-index:40;display:grid;place-items:end center;backdrop-filter:blur(2px)}
+.sheet{width:100%;max-width:460px;background:var(--bone);border:1.5px solid var(--ink);border-bottom:0;max-height:90vh;overflow:auto;
+  padding:24px max(var(--gut),env(safe-area-inset-right,0px)) calc(22px + env(safe-area-inset-bottom,0px)) max(var(--gut),env(safe-area-inset-left,0px))}
+.sheet .top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.sheet h3{font-size:1.55rem;margin-top:6px}
+.sheet .x{font-family:var(--d);font-weight:600;font-size:1.6rem;line-height:1;color:var(--grey);padding:0 6px}
+.pick{display:flex;margin-top:10px;border:1.5px solid var(--ink)}
+.pick button{flex:1;padding:13px 4px;font-size:.875rem;font-weight:600;letter-spacing:.12em;border-right:1.5px solid var(--ink)}
+.pick button:last-child{border-right:0}
+.pick button[aria-pressed="true"]{background:var(--ink);color:var(--bone)}
+.wa{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1.5px solid var(--ink);padding:15px 16px;text-decoration:none;margin-top:10px;transition:.18s}
+.wa:hover{background:var(--ink);color:var(--bone)}
+.wa:hover .sub2{color:#C9C2B6}
+.wa b{display:block;font-weight:600;font-size:.9375rem}
+.wa .sub2{font-size:.6875rem;font-weight:500;letter-spacing:.08em;color:var(--grey)}
+.slbl{display:block;margin-top:20px}
+.note{font-size:.8125rem;color:var(--grey);margin-top:16px;padding-top:14px;border-top:1px solid var(--rule)}
+
+/* ---- wider screens ---- */
+@media(min-width:600px){
+  :root{--gut:24px}
+  .grid{grid-template-columns:repeat(3,1fr);gap:28px 20px}
+  .doors{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .controls{grid-template-columns:1fr auto}
+  .section{padding-block:56px}
+  .pad{display:none}
+  .legal .wrap{display:flex;justify-content:space-between;text-align:left}
+}
+@media(min-width:860px){
+  body{font-size:17px}
+  .hero .wrap{padding-block:96px 76px}
+  .hero h1{font-size:clamp(3.4rem,7vw,5.4rem)}
+  .hero .sub{font-size:1.125rem}
+  .door{padding:38px 32px}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .section{padding-block:76px}
+  .shead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .shead .r{padding-bottom:6px;margin-top:0}
+  footer .wrap{grid-template-columns:auto 1fr 1fr;justify-items:start;text-align:left;padding-block:52px}
+}
+@media(min-width:1080px){ .grid{grid-template-columns:repeat(4,1fr)} }
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .r1,.r2,.r3,.r4,.r5,.card,.bar img{opacity:1!important;transform:none!important}
+}
+</style>
+
+<header class="bar">
+  <svg class="wave" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1200 V18 C1030,18 940,6 820,28 C745,42 700,50 600,50 C500,50 455,42 380,28 C260,6 170,18 0,18 Z"/></svg>
+  <div class="wrap">
+    <button class="brand" aria-label="Voltar ao topo do site"><img src="logo-ink.png" alt="Devon"></button>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#arte">Sua arte</a>
+      <a href="#medidas">Medidas</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="lbl r1">Manaus · Est. 2026</span>
+      <h1 class="r2" style="margin-top:14px">Mais que uma roupa,<br><i>uma identidade.</i></h1>
+      <p class="sub r3">Camisas de time, streetwear e estampa sob encomenda. Escolhe a peça, chama no WhatsApp e pronto.</p>
+      <div class="cta r4">
+        <a class="btn solid" href="#catalogo">Ver o catálogo <i>→</i></a>
+        <a class="btn ghost" href="https://wa.me/5592985177550?text=Oi!%20Vim%20pelo%20cat%C3%A1logo%20da%20Devon." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="facts r5">
+        <div><b>16</b><span>peças prontas</span></div>
+        <div><b>P–GG</b><span>todos os tamanhos</span></div>
+        <div><b>Brasil</b><span>envio para todo o país</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tick" aria-hidden="true"><div class="tick-in">
+  <p>Tailandesa<i>◆</i>StreetWear<i>◆</i>Polo<i>◆</i>Short<i>◆</i>Estampa personalizada<i>◆</i>Bordado<i>◆</i>Envio para todo o Brasil<i>◆</i></p>
+  <p>Tailandesa<i>◆</i>StreetWear<i>◆</i>Polo<i>◆</i>Short<i>◆</i>Estampa personalizada<i>◆</i>Bordado<i>◆</i>Envio para todo o Brasil<i>◆</i></p>
+</div></div>
+
+<div class="doors">
+  <a class="door" href="#catalogo">
+    <span class="lbl">Pronta entrega</span>
+    <h3>Escolhe e leva</h3>
+    <p>Peça já feita. Clica no número, manda no WhatsApp e recebe.</p>
+    <span class="go">Ver o catálogo <i>→</i></span>
+  </a>
+  <a class="door" href="#arte">
+    <span class="lbl">Sob encomenda</span>
+    <h3>Sua arte</h3>
+    <p>Manda a ideia, a Devon desenha a estampa, você aprova e a gente produz.</p>
+    <span class="go">Ver como funciona <i>→</i></span>
+  </a>
+</div>
+
+<section class="section" id="catalogo">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <span class="lbl">Pronta entrega</span><h2>O catálogo</h2>
+        <p class="muted" style="margin-top:10px;max-width:44ch;font-size:.9375rem">Cada peça tem um número. Clica nela, escolhe o tamanho e o WhatsApp abre com o pedido já escrito.</p>
+      </div>
+      <p class="r"><span id="count">0</span> peças · preços de 21/11/2026</p>
+    </div>
+    <hr class="rule under">
+    <div class="feat" id="feat"></div>
+    <div class="controls">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        <input id="q" type="search" placeholder="Buscar peça ou número" autocomplete="off">
+      </label>
+      <select id="sort" aria-label="Ordenar">
+        <option value="destaque">Destaques</option>
+        <option value="menor">Menor preço</option>
+        <option value="maior">Maior preço</option>
+      </select>
+    </div>
+    <div class="chips" id="chips"></div>
+    <p class="shown" id="shown"></p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="section dark" id="arte">
+  <img class="mark-bg" src="logo-bone.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="shead"><div><span class="lbl">Sob encomenda</span><h2>Sua ideia, nossa arte</h2></div></div>
+    <hr class="rule under">
+    <p class="lead">Você traz o tema, a Devon desenha a estampa e produz a peça. Frente, costas ou as duas.</p>
+
+    <div class="temas">
+      <span class="lbl">O que a gente estampa</span>
+      <ul>
+        <li>Gospel</li><li>Anime</li><li>Geek e filmes</li><li>Escudo de time</li><li>Bordado</li><li>Frases</li>
+      </ul>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="k">I</div><h4>Manda a ideia</h4><p>Pelo WhatsApp ou pelo Direct. Pode ser um desenho, uma foto ou só a descrição.</p></div>
+      <div class="step"><div class="k">II</div><h4>A gente desenha</h4><p>A Devon monta a arte e te manda a prévia na peça, frente e costas.</p></div>
+      <div class="step"><div class="k">III</div><h4>Você aprova</h4><p>Ajusta o que quiser. Só produz depois do seu OK.</p></div>
+      <div class="step"><div class="k">IV</div><h4>Produz e envia</h4><p>Entrega em Manaus ou envio para todo o Brasil.</p></div>
+    </div>
+
+    <div class="arte-end">
+      <div>
+        <span class="lbl">O que mandar</span>
+        <p>Já tem a arte pronta? Manda em PNG ou JPG, no maior tamanho que você tiver — quanto maior o arquivo, melhor sai a estampa. Só tem a ideia na cabeça? Descreve que a gente desenha pra você.</p>
+      </div>
+      <a class="btn" href="https://wa.me/5592985177550?text=Oi!%20Quero%20fazer%20uma%20estampa%20personalizada." target="_blank" rel="noopener">Começar minha estampa <i>→</i></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="medidas">
+  <div class="wrap">
+    <div class="shead">
+      <div><span class="lbl">Antes de pedir</span><h2>Tabela de medidas</h2></div>
+      <p class="r">Medidas da peça em centímetros</p>
+    </div>
+    <hr class="rule under">
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Tamanho</th><th>Largura</th><th>Comprimento</th><th>Manga</th></tr></thead>
+        <tbody>
+          <tr><td>P</td><td>50</td><td>70</td><td>19</td></tr>
+          <tr><td>M</td><td>53</td><td>72</td><td>20</td></tr>
+          <tr><td>G</td><td>56</td><td>74</td><td>21</td></tr>
+          <tr><td>GG</td><td>59</td><td>76</td><td>22</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:.8125rem;margin-top:14px">Medidas de exemplo — trocar pelas reais da Devon antes de publicar.</p>
+  </div>
+</section>
+
+<section class="section" id="duvidas" style="background:var(--paper);border-top:1px solid var(--rule)">
+  <div class="wrap">
+    <div class="shead"><div><span class="lbl">Dúvidas frequentes</span><h2>Perguntas</h2></div></div>
+    <hr class="rule under">
+    <details><summary>Como eu faço o pedido?</summary><p>Clica na peça, escolhe o tamanho e aperta no vendedor. O WhatsApp abre com a mensagem já escrita, com o número e o tamanho da peça.</p></details>
+    <details><summary>Vocês entregam fora de Manaus?</summary><p>Sim. Em Manaus a entrega é combinada direto com o vendedor. Para o resto do Brasil o envio é pelos Correios, e o frete é calculado na hora do pedido.</p></details>
+    <details><summary>Quanto tempo leva uma estampa personalizada?</summary><p>Depende da fila de produção e da complexidade da arte. O vendedor te passa o prazo junto com a prévia, antes de você aprovar.</p></details>
+    <details><summary>Posso mandar minha própria arte?</summary><p>Pode. Quanto maior a resolução do arquivo, melhor fica a estampa. Se você só tiver a ideia, a Devon desenha pra você.</p></details>
+    <details><summary>E se o tamanho não servir?</summary><p>Confere a tabela de medidas antes de fechar o pedido. Para trocas, fala com o vendedor que te atendeu.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="logo-bone.png" alt="Devon">
+    <div>
+      <h5>Falar com a gente</h5>
+      <a href="https://wa.me/5592985177550" target="_blank" rel="noopener">Saullo — (92) 98517-7550</a>
+      <a href="https://wa.me/5592995165115" target="_blank" rel="noopener">Pedro — (92) 99516-5115</a>
+    </div>
+    <div>
+      <h5>Redes</h5>
+      <a href="https://www.instagram.com/store.devon/" target="_blank" rel="noopener">Instagram @store.devon</a>
+    </div>
+  </div>
+  <div class="legal"><div class="wrap">
+    <span>Devon Store · Manaus / AM · Est. 2026</span>
+    <span>Preços sujeitos a alteração</span>
+  </div></div>
+</footer>
+
+<div class="pad"></div>
+<div class="dock" id="dock">
+  <a href="https://wa.me/5592985177550?text=Oi!%20Vim%20pelo%20cat%C3%A1logo%20da%20Devon." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.2 1.3-2 1.4-.5.1-1.2.1-3.4-.8-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.2.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.6-.1 1.3z"/></svg>
+    <span>Falar no WhatsApp</span>
+  </a>
+</div>
+
+<script>
+const SELLERS=[{n:'Saullo',p:'5592985177550',d:'(92) 98517-7550'},{n:'Pedro',p:'5592995165115',d:'(92) 99516-5115'}];
+const SIZES=['P','M','G','GG'];
+const P=[
+ {n:1,c:'Tailandesa',t:'Argentina',p:130,f:1,d:1},
+ {n:2,c:'Tailandesa',t:'Atlético de Madrid',p:130},
+ {n:3,c:'Tailandesa',t:'Barcelona Laranja',p:130,f:1},
+ {n:4,c:'Tailandesa',t:'Bayern',p:130},
+ {n:5,c:'Tailandesa',t:'Bélgica',p:130},
+ {n:6,c:'Tailandesa',t:'Chelsea Total 90',p:115,f:1},
+ {n:7,c:'StreetWear',t:'2 Pac',p:60,f:1},
+ {n:8,c:'StreetWear',t:'Camisa Crtz',p:60},
+ {n:9,c:'StreetWear',t:'Camisa KS',p:60},
+ {n:10,c:'StreetWear',t:'Cronic Paz',p:60,f:1},
+ {n:11,c:'StreetWear',t:'Glory Boyz',p:60},
+ {n:12,c:'StreetWear',t:'High Dragão',p:60,f:1},
+ {n:13,c:'Polo',t:'Polo Lacoste Branca',p:90},
+ {n:14,c:'Polo',t:'Polo Lacoste Preta',p:90},
+ {n:15,c:'Polo',t:'Polo Lacoste Azul',p:90},
+ {n:16,c:'Short',t:'Short Elastano',p:50}
+];
+const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+
+function shot(it){
+  const S='fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"';
+  if(it.c==='Short')
+    return `<svg viewBox="0 0 200 180" aria-hidden="true"><path d="M42 26h116l11 128h-54l-15-74-15 74H31z" ${S}/><path d="M42 44h116" ${S}/></svg>`;
+  const body=`<path d="M78 14 60 22 24 50l17 30 19-12v122q40 9 80 0V68l19 12 17-30-36-28-18-8q-19 19-44 0z" ${S}/>`;
+  const collar = it.c==='Polo'
+    ? `<path d="M84 14l16 20 16-20" ${S}/><path d="M93 34v30" ${S}/><circle cx="100" cy="46" r="2.8" ${S}/><circle cx="100" cy="60" r="2.8" ${S}/>`
+    : `<path d="M80 15q20 20 40 0" ${S}/>`;
+  const extra = it.c==='Tailandesa'
+    ? `<path d="M100 76v46M86 88h28" ${S} opacity=".4"/>`
+    : it.c==='StreetWear' ? `<rect x="76" y="80" width="48" height="44" rx="2" ${S} opacity=".4"/>` : '';
+  return `<svg viewBox="0 0 200 200" aria-hidden="true">${body}${collar}${extra}</svg>`;
+}
+
+let cat='Tudo', sort='destaque', q='';
+const grid=document.getElementById('grid'), chips=document.getElementById('chips');
+const counts=()=>{const m={};P.forEach(x=>m[x.c]=(m[x.c]||0)+1);return [['Tudo',P.length],...Object.entries(m)]};
+
+function drawChips(){
+  chips.innerHTML=counts().map(([k,v])=>
+    `<button class="chip" aria-pressed="${k===cat}" data-k="${k}">${k}<sup>${v}</sup></button>`).join('');
+}
+function list(){
+  let r=P.filter(x=>cat==='Tudo'||x.c===cat);
+  const s=q.trim().toLowerCase();
+  if(s) r=r.filter(x=>x.t.toLowerCase().includes(s)||String(x.n)===s.replace(/\D/g,''));
+  if(sort==='menor') r=[...r].sort((a,b)=>a.p-b.p);
+  else if(sort==='maior') r=[...r].sort((a,b)=>b.p-a.p);
+  else r=[...r].sort((a,b)=>(b.f?1:0)-(a.f?1:0)||a.n-b.n);
+  return r;
+}
+function draw(){
+  const r=list();
+  document.getElementById('count').textContent=P.length;
+  document.getElementById('shown').textContent =
+    r.length===P.length ? `Todas as ${P.length} peças` : `${r.length} de ${P.length} peças`;
+  grid.innerHTML = r.length ? r.map((it,i)=>`
+    <button class="card" data-n="${it.n}" style="animation-delay:${Math.min(i,11)*50}ms">
+      <div class="shot">${shot(it)}<span class="n">Nº ${String(it.n).padStart(2,'0')}</span><span class="ph">foto do produto</span></div>
+      <div>
+        <div class="meta1"><span class="cat">${it.c}</span><span class="price">${brl(it.p)}</span></div>
+        <div class="name">${it.t}</div>
+        <div class="sz">${SIZES.join(' · ')}</div>
+      </div>
+    </button>`).join('')
+  : `<div class="empty">Nenhuma peça encontrada. Tenta outro nome ou número.</div>`;
+}
+
+chips.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;cat=b.dataset.k;drawChips();draw()});
+document.getElementById('q').addEventListener('input',e=>{q=e.target.value;draw()});
+document.getElementById('sort').addEventListener('change',e=>{sort=e.target.value;draw()});
+grid.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openSheet(+c.dataset.n)});
+
+let sheet=null,size='M';
+const msg=it=>`Oi! Vim pelo catálogo da Devon. Quero a Nº ${String(it.n).padStart(2,'0')} — ${it.t}, tamanho ${size}.`;
+const links=it=>SELLERS.map(s=>`<a class="wa" href="https://wa.me/${s.p}?text=${encodeURIComponent(msg(it))}" target="_blank" rel="noopener">
+  <span><b>Falar com ${s.n}</b><span class="sub2">${s.d}</span></span>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.2 1.3-2 1.4-.5.1-1.2.1-3.4-.8-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.2.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.6-.1 1.3z"/></svg></a>`).join('');
+
+function openSheet(n){
+  const it=P.find(x=>x.n===n); if(!it) return; size='M';
+  sheet=document.createElement('div'); sheet.className='scrim';
+  sheet.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-label="Pedir ${it.t}">
+    <div class="top">
+      <div>
+        <span class="lbl">Nº ${String(it.n).padStart(2,'0')} · ${it.c}</span>
+        <h3>${it.t}</h3>
+        <p class="price" style="margin-top:8px;font-size:1.3rem">${brl(it.p)}</p>
+      </div>
+      <button class="x" aria-label="Fechar">×</button>
+    </div>
+    <span class="lbl slbl">Tamanho</span>
+    <div class="pick" id="pk">${SIZES.map(s=>`<button data-s="${s}" aria-pressed="${s===size}">${s}</button>`).join('')}</div>
+    <span class="lbl slbl">Pedir pelo WhatsApp</span>
+    <div id="wl">${links(it)}</div>
+    <p class="note">A mensagem já vai escrita com o número e o tamanho da peça. É só enviar.</p>
+  </div>`;
+  document.body.appendChild(sheet);
+  const close=()=>{sheet?.remove();sheet=null;document.removeEventListener('keydown',esc)};
+  const esc=e=>{if(e.key==='Escape')close()};
+  document.addEventListener('keydown',esc);
+  sheet.addEventListener('click',e=>{
+    if(e.target===sheet||e.target.closest('.x')) return close();
+    const b=e.target.closest('#pk button');
+    if(b){size=b.dataset.s;
+      sheet.querySelectorAll('#pk button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.s===size));
+      sheet.querySelector('#wl').innerHTML=links(it);}
+  });
+  sheet.querySelector('.x').focus();
+}
+drawChips(); draw();
+
+/* logo: canto -> centro ao rolar; clique volta ao topo */
+const bar=document.querySelector('.bar'), brand=document.querySelector('.brand'), dock=document.getElementById('dock');
+let tick=false;
+function onScroll(){
+  if(tick) return; tick=true;
+  requestAnimationFrame(()=>{
+    bar.classList.toggle('scrolled',window.scrollY>90);
+    dock.classList.toggle('open',window.scrollY+innerHeight>document.documentElement.scrollHeight-200);
+    tick=false;
+  });
+}
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+brand.addEventListener('click',()=>{
+  const quieto=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top:0,behavior:quieto?'auto':'smooth'});
+});
+
+/* peca em destaque */
+const feat=document.getElementById('feat');
+function drawFeat(){
+  const it=P.find(x=>x.d)||P[0];
+  feat.innerHTML=`
+    <div class="feat-art">${shot(it)}</div>
+    <div class="feat-txt">
+      <span class="lbl">Em destaque · Nº ${String(it.n).padStart(2,'0')}</span>
+      <h3>${it.t}</h3>
+      <p>${it.c} · tamanhos P a GG · pronta entrega em Manaus e envio para todo o Brasil.</p>
+      <div class="feat-row">
+        <span class="price">${brl(it.p)}</span>
+        <button class="btn solid" data-n="${it.n}">Pedir agora <i>→</i></button>
+      </div>
+    </div>`;
+}
+feat.addEventListener('click',e=>{const b=e.target.closest('button[data-n]');if(b)openSheet(+b.dataset.n)});
+drawFeat();
+
+/* o touro escarva quando ninguem mexe */
+const logo=document.querySelector('.bar img');
+let idle;
+const quietoSempre=matchMedia('(prefers-reduced-motion: reduce)').matches;
+logo.addEventListener('animationend',e=>{
+  if(e.animationName==='mark') logo.classList.add('ready');
+  if(e.animationName==='paw'){logo.classList.remove('paw');agenda()}
+});
+function agenda(){
+  clearTimeout(idle);
+  if(quietoSempre) return;
+  idle=setTimeout(()=>{if(logo.classList.contains('ready'))logo.classList.add('paw')},7000);
+}
+['scroll','pointermove','pointerdown','keydown','touchstart'].forEach(ev=>
+  addEventListener(ev,()=>{logo.classList.remove('paw');agenda()},{passive:true}));
+agenda();
+</script>
+
+</body>
+</html>
